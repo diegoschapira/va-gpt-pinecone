@@ -36,19 +36,18 @@ header = st.container()
 body = st.container()
 
 with header:
-    ##st.image('Oral-B-logo.png',width=200)
-    st.title('''Hi I'm Genie! How can I help?''')
+       st.title('''Hi I'm a Virtual Assistant! How can I help?''')
     
 with body:
     
     with st.form(key="my_form"):
-        query = st.text_input('Ask me a question including as much detail as possible (for example: Where I can find replacement head for Series 8 Type 5795 ?)')
+        query = st.text_input('Ask me a question including as much detail as possible')
                 
         style = st.radio('Select a style of writing:',('Direct Answer','Email Message','Summary'))
         if style == 'Dierct Answer':
             instruction = '''Answer the question by extracting information from Context below. If information is not in Context answer "I'm unable to answer the question". Do not generate responses that don't use the information in Context.'''
         elif style == 'Email Message':
-            instruction = '''You are a Braun chat assistant. Your goal is to build brand trust and make consumers feel valued. Write a personalized response to the consumer question by extracting information from Context. If information is not in Context answer "I'm unable to answer the question". Do not generate responses that don't use the information in Context or if information in Context is not related to the Question.'''
+            instruction = '''You are a chat assistant. Your goal is to build brand trust and make consumers feel valued. Write a personalized response to the consumer question by extracting information from Context. If information is not in Context answer "I'm unable to answer the question". Do not generate responses that don't use the information in Context or if information in Context is not related to the Question.'''
         elif style == 'Summary':
             instruction = '''Extract main issues from consumer question'''
         else:
