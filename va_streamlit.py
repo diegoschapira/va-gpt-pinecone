@@ -30,7 +30,7 @@ index = pinecone.Index(PINECONE_INDEX_NAME)
 
 limit = 3750
 
-st.set_page_config(page_title='Genie Help!',page_icon=":dart:")
+st.set_page_config(page_title='Help!',page_icon=":dart:")
 
 header = st.container()
 body = st.container()
